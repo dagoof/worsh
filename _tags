@@ -1,0 +1,1 @@
+<*.*>: syntax(camlp4o), package(orm.syntax, opium.unix)
