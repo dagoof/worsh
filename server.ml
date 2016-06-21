@@ -6,16 +6,14 @@ let u_db = Data.user_init dbname
 
 let p_db = Data.pack_init dbname
 
-open Data
-
-let base_user name =
-    { name = name
-    ; email = Printf.sprintf "%s@example.com" name
+let base_user ~name =
+    { Data.email = Printf.sprintf "%s@example.com" name
+    ; name
     }
 
-let base_pack user caption =
-    { user = user
-    ; caption = caption
+let base_pack ~user ~caption =
+    { Data.user
+    ; caption
     ; images = []
     ; plates = 0
     ; bowls = 0
